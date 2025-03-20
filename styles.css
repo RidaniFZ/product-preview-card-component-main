@@ -1,7 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space between card and footer */
+  align-items: center;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Ensures the main element takes the full height of the viewport */
+  flex: 1; /* Allows the main content to take up remaining space */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+}
+
+.card__image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.card__info-section {
+  padding: 1.5rem;
+}
+
+.card__info-section span {
+  font-size: 0.9rem;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card__title {
+  font-family: Fraunces, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  color: hsl(212, 21%, 14%);
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: hsl(228, 12%, 48%);
+  margin: 0.5rem 0 1.5rem;
+  line-height: 1.6;
+}
+
+.card__price {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: Fraunces, sans-serif;
+}
+
+.card__price--new {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.card__price--old {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+}
+.card__button-icon {
+  width: 1rem;
+  height: 1rem;
+}
+.card__button:hover {
+  background-color: hsl(158, 36%, 27%);
+}
 .attribution {
-  font-size: 11px;
+  font-size: 0.8rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .card__image-section {
+    width: 50%;
+  }
+
+  .card__info-section {
+    flex: 1;
+    text-align: left;
+    padding: 1.8rem 1.5rem 0 1.5rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .card__description {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 0.5rem 0;
+  }
+  .card__button {
+    margin-bottom: 1.5rem;
+  }
+  .card__image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    display: block; /* Prevents extra space below the image */
+  }
 }
