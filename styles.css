@@ -1,3 +1,12 @@
+:root {
+    --Green500-color: hsl(158, 36%, 37%);
+    --Grey-color: hsl(228, 12%, 48%);
+    --Green700-color: hsl(158, 42%, 18%);  
+    --Black-color: hsl(212, 21%, 14%);
+    --Cream-color: hsl(30, 38%, 92%);
+    --White-color: hsl(0, 0%, 100%);
+}
+
 /* General Reset */
 * {
   margin: 0;
@@ -7,7 +16,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: hsl(30, 38%, 92%);
+  background-color: var(--Cream-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -28,7 +37,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var (--White-color);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,7 +56,7 @@ main {
 
 .card__info-section span {
   font-size: 0.9rem;
-  color: hsl(228, 12%, 48%);
+  color: var(--Grey-color);
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -59,12 +68,12 @@ main {
   line-height: 1.2;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  color: hsl(212, 21%, 14%);
+  color: var (--Black-color);
 }
 
 .card__description {
   font-size: 0.9rem;
-  color: hsl(228, 12%, 48%);
+  color: var(--Grey-color);
   margin: 0.5rem 0 1.5rem;
   line-height: 1.6;
 }
@@ -79,13 +88,13 @@ main {
 .card__price--new {
   font-size: 1.8rem;
   font-weight: 700;
-  color: hsl(158, 36%, 37%);
+  color: var(--Green500-color);
 }
 
 .card__price--old {
   font-size: 0.9rem;
   text-decoration: line-through;
-  color: hsl(228, 12%, 48%);
+  color: var(--Grey-color);
 }
 
 .card__button {
@@ -93,8 +102,8 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0.5rem; /* Space between icon and text */
-  background-color: hsl(158, 36%, 37%);
-  color: white;
+  background-color: var(--Green500-color);
+  color: var(--White-color);
   border: none;
   border-radius: 5px;
   padding: 0.8rem 1.5rem;
@@ -110,7 +119,7 @@ main {
   height: 1rem;
 }
 .card__button:hover {
-  background-color: hsl(158, 36%, 27%);
+  background-color: var(--Green700-color);
 }
 .attribution {
   font-size: 0.8rem;
